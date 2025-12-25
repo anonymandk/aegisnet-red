@@ -268,3 +268,13 @@ if __name__ == "__main__":
     asyncio.run(main())
 
 
+from core.crypto import CryptoContext
+from core.node import Node
+
+def main():
+    crypto = CryptoContext()
+    node = Node("node1", crypto)
+    print("AegisNet-Red initialized")
+
+if __name__ == "__main__":
+    main()
