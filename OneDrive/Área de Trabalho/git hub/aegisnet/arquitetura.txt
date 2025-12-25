@@ -1,0 +1,15 @@
+aegisnet-red/
+├─ src/
+│  ├─ core/
+│  │  ├─ crypto.py
+│  │  ├─ node.py
+│  │  ├─ transport.py
+│  ├─ attacks/
+│  │  ├─ replay.py
+│  │  ├─ mitm.py
+│  ├─ ui/
+│  │  └─ cli.py
+│  └─ main.py
+├─ README.md
+├─ requirements.txt
+├─ .gitignore
