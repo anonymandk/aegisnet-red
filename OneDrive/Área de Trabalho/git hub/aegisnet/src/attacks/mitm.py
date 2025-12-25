@@ -3,7 +3,7 @@ class MitMAttackScenario:
         """
     Simulates a logical Man-in-the-Middle attack by attempting
     key substitution during handshake.
-    """
+        """
 
     def __init__(self):
         self.detected = False
