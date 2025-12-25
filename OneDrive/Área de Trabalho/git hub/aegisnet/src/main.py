@@ -278,3 +278,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+from attacks.replay import ReplayAttackScenario
+from attacks.mitm import MitMAttackScenario

@@ -1,9 +1,20 @@
-class ReplayAttackSimulator:
-    def __init__(self):
-        self.seen_messages = set()
+import time
 
-    def detect(self, msg_id):
-        if msg_id in self.seen_messages:
-            return True
-        self.seen_messages.add(msg_id)
-        return False
+class ReplayAttackScenario:
+    def __init__(self, window_seconds=30):
+        self.window = window_seconds
+        self.seen = {}
+
+    def observe(self, msg_id: str):
+        self.seen[msg_id] = time.time()
+
+    def is_replay(self, msg_id: str) -> bool:
+        now = time.time()
+
+        # cleanup old entries
+        self.seen = {
+            mid: ts for mid, ts in self.seen.items()
+            if now - ts < self.window
+        }
+
+        return msg_id in self.seen

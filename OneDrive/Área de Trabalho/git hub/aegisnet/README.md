@@ -24,3 +24,10 @@ This project is for educational and research purposes only.
 
 This framework simulates adversarial behaviors such as replay attacks
 and MITM key substitution for defensive analysis only.
+
+## Adversarial Scenarios
+
+- Replay attack simulation with time window detection
+- MITM key substitution and downgrade detection
+- Super-node abuse and availability attacks
+- Traffic analysis via metadata inference
