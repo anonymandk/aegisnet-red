@@ -6,8 +6,7 @@ class MitMAttackScenario:
         """
 
     def __init__(self):
-        self.detected = False
-        
+        self.detected = False    
     def substitute_key(self, advertised_key: bytes, malicious_key: bytes) -> dict:
         """
         Simulates key substitution and detects mismatch.
